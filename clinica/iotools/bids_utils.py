@@ -244,9 +244,7 @@ def create_sessions_dict(
                         if subj_bids not in sessions_dict:
                             sessions_dict.update({subj_bids: {}})
                         if s_name not in sessions_dict[subj_bids].keys():
-                            sessions_dict[subj_bids].update(
-                                {s_name: {"session_id": "ses-M00"}}
-                            )
+                            sessions_dict[subj_bids].update({s_name: {"session_id": s}})
                         (sessions_dict[subj_bids][s_name]).update(
                             {sessions_fields_bids[i]: row[sessions_fields[i]]}
                         )
