@@ -506,7 +506,6 @@ def write_scans_tsv(bids_dir, bids_ids, scans_dict):
     import pandas as pd
 
     for bids_id in bids_ids:
-        bids_id = bids_id.split(os.sep)[-1]
         sessions_paths = glob(path.join(bids_dir, bids_id, "ses-*"))
         for session_path in sessions_paths:
             session_name = session_path.split(os.sep)[-1]
@@ -532,6 +531,8 @@ def write_scans_tsv(bids_dir, bids_ids, scans_dict):
                             if "-" in carac
                         }
                         f_type = description_dict["trc"].upper()
+                    elif mod_name == "swi":
+                        pass
                     else:
                         continue
 
