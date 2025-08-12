@@ -18,7 +18,7 @@ jobs:
       - macOS
     timeout-minutes: 720
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
       - name: Run tests for dwi pre-processing using t1 pipelines
         run: |
@@ -43,7 +43,7 @@ jobs:
       - macOS
     timeout-minutes: 720
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
       - name: Run tests for dwi pre-processing using phasediff pipelines
         run: |
@@ -69,7 +69,7 @@ jobs:
       - test-runner
     timeout-minutes: 720
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
         with:
           version: ${{ env.POETRY_VERSION }}
@@ -102,7 +102,7 @@ jobs:
       - test-runner
     timeout-minutes: 720
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
         with:
           version: ${{ env.POETRY_VERSION }}

@@ -18,7 +18,7 @@ jobs:
       - macOS
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
       - name: Run tests for t1 linear pipelines
         run: |
@@ -43,7 +43,7 @@ jobs:
       - macOS
     timeout-minutes: 720
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
       - name: Run tests for t1 volume pipelines
         run: |
@@ -70,7 +70,7 @@ jobs:
       - test-runner
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
         with:
           version: ${{ env.POETRY_VERSION }}
@@ -103,7 +103,7 @@ jobs:
       - test-runner
     timeout-minutes: 720
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
         with:
           version: ${{ env.POETRY_VERSION }}

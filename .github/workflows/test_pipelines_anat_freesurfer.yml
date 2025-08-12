@@ -18,7 +18,7 @@ jobs:
       - macOS
     timeout-minutes: 1440
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
       - name: Run tests for anat pipelines using freesurfer
         run: |
@@ -44,7 +44,7 @@ jobs:
       - test-runner
     timeout-minutes: 1440
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: snok/install-poetry@v1
         with:
           version: ${{ env.POETRY_VERSION }}
