@@ -22,7 +22,7 @@ jobs:
       - self-hosted
       - macOS
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: snok/install-poetry@v1
         with:
           version: ${{ env.POETRY_VERSION }}
@@ -55,7 +55,7 @@ jobs:
       - Linux
       - test-runner
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: snok/install-poetry@v1
         with:
           version: ${{ env.POETRY_VERSION }}
